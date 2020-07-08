@@ -34,7 +34,7 @@ class First_exercise:
                 print("Thank you for entering your name")
                 return self.name
 
-    # Function to write name
+    # Method to write name
     def write_name(self):
         # Calling previous function to get self.name
         self.user_input()
@@ -45,7 +45,7 @@ class First_exercise:
             file.seek(0)
             self.new_text = str(file.read())
 
-    # function to write another file
+    # Method to write another file
     def write_again(self):
         # Calling previous function to make sure have information before
         self.write_name()
@@ -53,6 +53,7 @@ class First_exercise:
         with open("new_file.text", "w+") as file:
             file.write(self.new_text)
 
+    # Method to act with images
     def upload_image(self):
         # Reading and showing image
         img = cv2.imread("leapord.jpg", 0)
