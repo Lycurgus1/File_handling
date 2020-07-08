@@ -21,8 +21,10 @@ text_file_object = Text_file_handling(file_path)
 # # Testing read using with method
 # print(text_file_object.read_text_file_with())
 
-# Testing write using with method
-print(text_file_object.write_text_file_with())
+# # Testing write using with method
+# print(text_file_object.write_text_file_with())
+
+text_file_object.playing_with_OSmodule()
 
 # # Readline
 # file = open(file_path, "r")

@@ -76,6 +76,36 @@ class Text_file_handling:
         with open("writer.txt", "a+") as file:
             file.write("\nUsing writer with functionality, append")
             # Need to included file.seek to repostion pointer
+            print(file.tell())
             file.seek(0)
             self.text_storage = file.read()
             return self.text_storage
+
+    def playing_with_OSmodule(self):
+        # Importing os module. Affects file system
+        import os
+
+        # # Get current working directory
+        # print(os.getcwd())
+
+        # # List directories
+        # print(os.listdir())
+
+        # # Deleting writer.txt file
+        # os.remove("writer.txt")
+
+        # # Renaming file
+        # os.rename("order.txt", "modified.txt")
+
+        # # Changing directory. Have to change direction of slashes in folder location
+        # os.chdir("C:/Users/Maximilian Palmer/PycharmProjects/File_handling")
+        # print(os.getcwd())
+
+        # # OS.open command, can't seem to make it work
+        # os.open("modified.txt", 5, 6)
+
+        # # Making a new directory
+        # os.mkdir("Max")
+
+        # # Removing new directory
+        # os.rmdir("Max")
