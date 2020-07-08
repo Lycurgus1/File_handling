@@ -18,23 +18,6 @@ class Text_file_handling:
         # file.close()
         # return self.text_storage
 
-        # try, except loop
-        # Tries try statement. If works run else
-        try:
-            file = open(self.file_path, "r")
-        # Except runs if error occurs
-        except Exception as e:
-            print(e)
-        # Runs if try statement succeeds
-        else:
-            file.tell()
-            self.text_storage = file.read(10)
-            file.close()
-            return self.text_storage
-        # Will always run, irrelevant of exception
-        finally:
-            file.close()
-
     # Writing to text
     def write_text_file(self):
         # Open file, have to specify what mode opening it in
@@ -88,7 +71,6 @@ class Text_file_handling:
     def write_text_file_with(self):
         # with open("writer.txt", "w+") as file:
         #     file.write("Using writer with functionality")
-
         # Using append plus, to read and append
         with open("writer.txt", "a+") as file:
             file.write("\nUsing writer with functionality, append")
