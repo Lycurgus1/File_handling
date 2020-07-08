@@ -8,15 +8,32 @@ class Text_file_handling:
 
     # Reading to text
     def read_text_file(self):
-        # Open file, have to specify what mode opening it in
-        file = open(self.file_path, "r")
-        # Read file. Number records amount of characters read
-        file.tell() # Pointer is at current position and will start reading from there
-        # file.seek(10) # Tells code where to print from
-        self.text_storage = file.read(10)
-        # Close file, returning variable so it is saved
-        file.close()
-        return self.text_storage
+        # # Open file, have to specify what mode opening it in
+        # file = open(self.file_path, "r")
+        # # Read file. Number records amount of characters read
+        # file.tell()  # Pointer is at current position and will start reading from there
+        # # file.seek(10) # Tells code where to print from
+        # self.text_storage = file.read(10)
+        # # Close file, returning variable so it is saved
+        # file.close()
+        # return self.text_storage
+
+        # try, except loop
+        # Tries try statement. If works run else
+        try:
+            file = open(self.file_path, "r")
+        # Except runs if error occurs
+        except Exception as e:
+            print(e)
+        # Runs if try statement succeeds
+        else:
+            file.tell()
+            self.text_storage = file.read(10)
+            file.close()
+            return self.text_storage
+        # Will always run, irrelevant of exception
+        finally:
+            file.close()
 
     # Writing to text
     def write_text_file(self):
@@ -85,8 +102,8 @@ class Text_file_handling:
         # Importing os module. Affects file system
         import os
 
-        # # Get current working directory
-        # print(os.getcwd())
+        # Get current working directory
+        print(os.getcwd())
 
         # # List directories
         # print(os.listdir())

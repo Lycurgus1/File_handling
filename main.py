@@ -9,8 +9,8 @@ from text_file import Text_file_handling
 file_path = "order.txt"
 text_file_object = Text_file_handling(file_path)
 
-# # Calling/testing read text function
-# print(text_file_object.read_text_file())
+# Calling/testing read text function
+print(text_file_object.read_text_file())
 
 # # Calling write text method, creating new text file
 # text_file_object.write_text_file()
@@ -24,7 +24,8 @@ text_file_object = Text_file_handling(file_path)
 # # Testing write using with method
 # print(text_file_object.write_text_file_with())
 
-text_file_object.playing_with_OSmodule()
+# # Testing OS module
+# text_file_object.playing_with_OSmodule()
 
 # # Readline
 # file = open(file_path, "r")
